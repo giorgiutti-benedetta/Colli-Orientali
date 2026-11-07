@@ -2,6 +2,7 @@
 <head>
     <!-- codifica dei caratteri -->    
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vini dei Colli Orientali</title>
     <link rel="stylesheet" href="sito_reti_stile.css">
 
@@ -17,99 +18,147 @@
     <div class = "titoloVigne">
         <h1>COLLI ORIENTALI</h1>
         <h2>I vini del nostro friuli</h2>
-        <!-- <p>I Colli Orientali del Friuli sono una storica area vitivinicola della provincia di Udine, riconosciuta come DOC dal 1970, nota per terreni di marne e arenarie definiti “ponca” e per la produzione di vini bianchi e rossi da vitigni autoctoni e internazionali.</p>
-        I Colli Orientali del Friuli fanno parte della prestigiosa denominazione Friuli Colli Orientali DOC, un'area situata in provincia di Udine rinomata per la produzione di vini di eccellenza. 
-            <br>Questa terra deve le sue peculiarità al connubio tra le brezze dell'Adriatico, la protezione delle Alpi e il tipico suolo di ponca, una stratificazione di marne e arenarie che dona ai vini una straordinaria mineralità e sapidità.</p>
-        -->
     </div>
 
-    <p>I Colli Orientali del Friuli sono una storica area vitivinicola della provincia di Udine, riconosciuta come DOC dal 1970, nota per terreni di marne e arenarie definiti “ponca” e per la produzione di vini bianchi e rossi da vitigni autoctoni e internazionali.</p>
-        I Colli Orientali del Friuli fanno parte della prestigiosa denominazione Friuli Colli Orientali DOC, un'area situata in provincia di Udine rinomata per la produzione di vini di eccellenza. 
-            <br>Questa terra deve le sue peculiarità al connubio tra le brezze dell'Adriatico, la protezione delle Alpi e il tipico suolo di ponca, una stratificazione di marne e arenarie che dona ai vini una straordinaria mineralità e sapidità.</p>
-        
+    <div class = "corpoSottoTitolo">
+        <div class = "tipologie">
+            <a href="rossi.html"> 
+                <span class="rossi">Vini Rossi</span> 
+                <img src="immagini/caliceRosso.png" alt="Vino Rosso">
+            </a>
 
-    <div class = "tipologie">
-        <a href="rossi.html"> 
-            <span class="rossi">Vini Rossi</span> 
-            <img src="immagini/caliceRosso.png" alt="Vino Rosso">
-        </a>
-
-        <a href="bianchi.html"> 
-            <span class="bianchi">Vini Binchi</span> 
-            <img src="immagini/caliceBianco.png" alt="Vino Binco">
-        </a>
-    </div>
-
-
-    <div class = "boxzone">
-        <a href="#nord">Zona Nord</a>
-        <a href="#centro">Zona Centro</a>
-        <a href="#sud">Zona Sud</a>
-    </div>
-    <div class="parteCentraleZoneMappa">
-        <div class="parteZoneScorrere">
-            <section id="nord">
-                <h2>Zona Nord</h2>
-                <p><strong>Clima:</strong> Più fresco e ventilato, protetto a ridosso delle Prealpi Giulie.</p>
-                <p><strong>Vini simbolo:</strong> Ramandolo (DOCG dolce da Verduzzo) e Refosco di Faedis.</p>
-                <p><strong>Caratteristica:</strong> Forte escursione termica tra giorno e notte, che dona ai vini aromi intensi ed elevata freschezza.</p>
-                  
-                    <p><strong>Tracento</strong></p>
-
-                    <h4>Nimis</h4>
-                    <h4>Attimis</h4>
-                    <h4>Feadis</h4>
-            </section>
-
-            <section id="centro">
-                <h2>Zona Centro</h2>
-                <p><strong>Clima:</strong> Mite e collinare, con suoli molto ricchi di ponca profonda.</p>
-                <p><strong>Vini simbolo:</strong> Schioppettino di Prepotto e grandi Bianchi minerali (Friulano, Malvasia).</p>
-                <p><strong>Caratteristica:</strong> È il cuore storico della DOC: terreni ideali per estrarre la tipica speziatura e sapidità.</p>
-                
-                <ul>
-                    <li>Cividale del Friuli</li>
-                    <li>Prepotto</li>
-                    <li>San Pietro al Natisone</li>
-                </ul>
-            </section>
-
-            <section id="sud">
-                <h2>Zona Sud</h2>
-                <p><strong>Clima:</strong> Rilievi dolci, soleggiati e riscaldati dalle correnti provenienti dal mare.</p>
-                <p><strong>Vini simbolo:</strong> Picolit, Ribolla Gialla di Rosazzo e rossi da lungo affinamento (Pignolo).</p>
-                <p><strong>Caratteristica:</strong> Temperature più miti che favoriscono uve più zuccherine, corposità e vini di grande struttura.</p>
-                
-                <ul>
-                    <li>Corno di Rosazzo</li>
-                    <li>Manzano</li>
-                    <li>San Giovanni al Natisone</li>
-                </ul>
-            </section>
+            <a href="bianchi.html"> 
+                <span class="bianchi">Vini Binchi</span> 
+                <img src="immagini/caliceBianco.png" alt="Vino Binco">
+            </a>
         </div>
 
-        <div class="parteZonaMappa">
-            <div class="mappa">
-                <img src="immagini/mappa.jpg" alt="Mappa dei Colli Orientali" class="fotoMappa">
-                <svg class="velo" viewBox="0 0 1792 2400">
-                    <polygon id="zona-nord"   class="zona" points="0,969 0,0 1775,0 1775 976 836,969 325,633 421,517 368,494 238,613 107,561 58,419 99,175 154,172 206,137 244,164 352,89 403,97 527,189 596,193 774,576 976,721" />
-                    <polygon id="zona-centro" class="zona" points="0, 1787 0,1787 719,837 972,718 842,964 1129,1096 1061,1239 1091,1345 1237,1414 586,1873 832,2059 1140,2075 1430,1991 1559,1579 1731,1397 1522,1333 1636,1252 1612,1121 1432,967" />
-                    <polygon id="zona-sud"    class="zona" points="0,1600 1792,1600 1792,2400 0,2400" />
-                </svg>
+        <p>I Colli Orientali del Friuli sono una storica area vitivinicola della provincia di Udine, riconosciuta come DOC dal 1970, nota per terreni di marne e arenarie definiti “ponca” e per la produzione di vini bianchi e rossi da vitigni autoctoni e internazionali.</p>
+
+
+        <div class = "tipologie">
+            <a href="#nord" class="zone">Zona Nord</a>
+            <a href="#centro" class="zone">Zona Centro</a>
+            <a href="#sud" class="zone">Zona <br> Sud</a>
+        </div>
+        <div class="parteCentraleZoneMappa">
+            <div class="parteZoneScorrere">
+
+                <section id="nord">
+                    <h2>Zona Nord</h2>
+                    <p><strong>Clima:</strong> Più fresco e ventilato, protetto a ridosso delle Prealpi Giulie.</p>
+                    <p><strong>Caratteristica:</strong> Forte escursione termica tra giorno e notte, che dona ai vini aromi intensi ed elevata freschezza.</p>
+                    
+                    <div class="comuni">
+                        <strong>Comuni principali:</strong> Tarcento, Nimis, Attimis, Faedis.
+                    </div>
+
+                    <div class="viniTipici">
+                        <h3>Vini tipici</h3>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/ramandolo.png" alt="Ramandolo DOCG">
+                            <div class="info-vino">
+                                <h4>Ramandolo (DOCG)</h4>
+                                <p>Vino dorato dolce da uve Verduzzo Friulano; profumi di miele, albicocca secca e un finale tipicamente tannico e asciutto.</p>
+                            </div>
+                        </div>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/refosco.png" alt="Refosco di Faedis">
+                            <div class="info-vino">
+                                <h4>Refosco di Faedis</h4>
+                                <p>Rosso autoctono antico e vibrante, noto per la spiccata acidità, note di frutti di bosco scuri e sentori selvatici.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="centro">
+                    <h2>Zona Centro</h2>
+                    <p><strong>Clima:</strong> Mite e collinare, con suoli molto ricchi di ponca profonda (*flysch*).</p>
+                    <p><strong>Caratteristica:</strong> Cuore storico della DOC: terreni perfetti per estrarre mineralità, sapidità e speziature uniche.</p>
+                    
+                    <div class="comuni">
+                        <strong>Comuni principali:</strong> Cividale del Friuli, Prepotto, Torreano, San Pietro al Natisone.
+                    </div>
+
+                    <div class="viniTipici">
+                        <h3>Vini tipici</h3>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/schioppettino.png" alt="Schioppettino di Prepotto">
+                            <div class="info-vino">
+                                <h4>Schioppettino di Prepotto</h4>
+                                <p>Rosso aristocratico e inconfondibile, celebre per la freschezza e l'intensa nota speziata di pepe verde in grani.</p>
+                            </div>
+                        </div>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/friulano.png" alt="Friulano">
+                            <div class="info-vino">
+                                <h4>Friulano</h4>
+                                <p>Il grande bianco della tradizione: minerale, strutturato, floreale, con il tipico e piacevole finale di mandorla amara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sud">
+                    <h2>Zona Sud</h2>
+                    <p><strong>Clima:</strong> Rilievi più dolci, caldi e accarezzati dalle brezze marine dell'Adriatico.</p>
+                    <p><strong>Caratteristica:</strong> Temperature più miti che favoriscono ottime maturazioni zuccherine, eleganza e vini longevi.</p>
+                    <p><strong>Comuni principali:</strong> Corno di Rosazzo, Buttrio, Manzano, Premariacco.</p>
+
+                    <div class="viniTipici">
+                        <h3>Vini tipici</h3>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/picolit.png" alt="Colli Orientali del Friuli Picolit">
+                            <div class="info-vino">
+                                <h4>Picolit (DOCG)</h4>
+                                <p>Rarissimo vino da meditazione ottenuto da acinellatura naturale; morbido, regale, con aromi di pesca sciroppata e acacia.</p>
+                            </div>
+                        </div>
+
+                        <div class="fotoViniTipici">
+                            <img src="immagini/rosazzo.png" alt="Rosazzo Bianco">
+                            <div class="info-vino">
+                                <h4>Rosazzo (DOCG)</h4>
+                                <p>Grande bianco da uvaggio guidato da uve autoctone; solenne, caldo, longevo e di straordinaria ampiezza gusto-olfattiva.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="parteZonaMappa">
+                <div class="mappa">
+                    <img src="immagini/mappa.jpg" alt="Mappa dei Colli Orientali" class="fotoMappa">
+                    <svg class="velo" viewBox="0 0 1792 2400">
+                        <polygon id="zona-nord"   class="zona" points="0,969 0,0 1775,0 1775 976 836,969 325,633 421,517 368,494 238,613 107,561 58,419 99,175 154,172 206,137 244,164 352,89 403,97 527,189 596,193 774,576 976,721" />
+                        <polygon id="zona-centro" class="zona" points="0, 1787 0,1787 719,837 972,718 842,964 1129,1096 1061,1239 1091,1345 1237,1414 586,1873 832,2059 1140,2075 1430,1991 1559,1579 1731,1397 1522,1333 1636,1252 1612,1121 1432,967" />
+                        <polygon id="zona-sud"    class="zona" points="0,1600 1792,1600 1792,2400 0,2400" />
+                    </svg>
+                </div>
             </div>
         </div>
-    </div>
-    
-    
+        
+        
 
-    <h2>Cenni Storici</h2>
-    <p>
-        La viticoltura nei Colli Orientali affonda le sue radici nell'epoca romana, quando la vicina Aquileia era uno dei porti e centri di commercio più importanti dell'Impero. 
-        <br>
-        Nel Medioevo furono soprattutto i monaci benedettini e l'influenza della Repubblica di Venezia a perfezionare la coltivazione della vite, selezionando i vitigni che oggi consideriamo storici e autoctoni.
-        <br>
-        Oggi questa tradizione secolare continua a vivere grazie a generazioni di vignaioli che preservano l'identità del territorio e valorizzano il suolo unico della nostra terra.
-    </p>
+        <div class="rigaStorica">
+            <h3>Cenni Storici</h3>
+            <img src="https://www.friulioggi.it/wp-content/uploads/2019/04/bandiera-friuli.png" alt="StemmaFriuli" class="StemmaFriuli">
+        </div>
+        <p>
+            La viticoltura nei Colli Orientali affonda le sue radici nell'epoca romana, quando la vicina Aquileia era uno dei porti e centri di commercio più importanti dell'Impero. 
+            <br>
+            Nel Medioevo furono soprattutto i monaci benedettini e l'influenza della Repubblica di Venezia a perfezionare la coltivazione della vite, selezionando i vitigni che oggi consideriamo storici e autoctoni.
+            <br>
+            Oggi questa tradizione secolare continua a vivere grazie a generazioni di vignaioli che preservano l'identità del territorio e valorizzano il suolo unico della nostra terra.
+        </p>
+    </div>
 
     <script src="script.js"></script>
     </body>
