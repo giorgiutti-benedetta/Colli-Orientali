@@ -1,0 +1,185 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times;
+  
+  /* background-color: #292526;*/
+
+  background-image: linear-gradient(rgba(97, 97, 97, 0.484), rgba(96, 95, 92, 0.406)), url("immagini/sfondoTotale.jpg"); 
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titoloVigne{
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-family: "Cinzel Decorative";
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+ 
+  background-image: linear-gradient(rgba(0, 0, 1, 0.484), rgba(0, 0, 0, 0.406)), url("immagini/vignaTitolo.jpg"); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.tasto_home {
+  position: absolute;      
+  top: 20px;
+  right: 20px;
+  background-color: #562f36; 
+  color: white;
+  padding: 9px 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.tipologie {
+  display: flex;
+  gap: 30px;
+  margin: 60px 40px 30px;
+}
+.tipologie a {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 20px 25px;
+  background-color: rgb(69, 69, 69);
+  border-radius: 16px;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0,3s ease, box-shadow 0.3s ease;
+}
+
+.tipologie a span {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rossi{
+  color: #ac1c34;
+}
+.bianchi{
+  color: #9c9327;
+}
+
+.tipologie a img {
+  height: 160px;
+  width: auto;
+  margin-top: -80px;  
+  display: block;
+}
+
+.boxzone {
+  display: flex;
+  gap: 20px; 
+}
+.boxzone a {
+  flex: 1;
+  padding: 40px;     
+  text-align: center;
+  background-color: #8e2135bb;
+  color: white;
+  text-decoration: none;
+}
+
+
+.parteCentraleZoneMappa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+/* 2. Colonna sinistra con i testi che scorrono */
+.parteZoneScorrere {
+  width: 55%;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+/* Dà altezza alle sezioni per far avvenire lo scorrimento */
+.parteZoneScorrere section {
+  min-height: 50vh;
+  padding-bottom: 40px;
+}
+
+/* 3. Colonna destra con la mappa che resta bloccata in alto */
+.parteZonaMappa {
+  width: 45%;
+  position: sticky;
+  top: 20px;
+  box-sizing: border-box;
+}
+
+.mappa {
+  position: relative;
+  max-width: 450px;
+}
+/* Adatta l'immagine alla colonna */
+.fotoMappa {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.velo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.zona {
+  fill: black;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
