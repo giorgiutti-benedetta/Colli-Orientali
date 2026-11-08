@@ -10,7 +10,7 @@ body{
   
   background-image: linear-gradient(rgba(5, 5, 5, 0.642), rgba(5, 5, 5, 0.642)), url("immagini/sfondoTotale.jpg"); 
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -35,8 +35,37 @@ body{
   }
 
   p{
+    font-size: 1.4rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
+}
+.territorio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 25px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #6b1d2f;
+}
+
+.blocco-territorio {
+  display: flex;
+  align-items: center; 
+  gap: 25px;
+  margin: 25px 0 40px; 
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0; 
+}
+
+.territorioScritta{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
 }
 
 .titoloVigne{
@@ -67,6 +96,14 @@ body{
   justify-content: flex-end;
 }
 
+.Rossi {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("immagini/sfondoRosso.jpg");
+}
+.Bianchi {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("immagini/sfondoBianchi.jpg");
+}
+
+
 .cinzel-decorative-regular {
   font-family: "Cinzel Decorative", serif;
   font-weight: 400;
@@ -91,7 +128,7 @@ body{
   right: 20px;
   background-color: #562f36; 
   color: white;
-  padding: 9px 10px;
+  padding: 9px 9px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -165,6 +202,10 @@ body{
 }
 
 .parteZoneScorrere {
+  p{
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
   width: 55%;
   box-sizing: border-box;
   padding-right: 20px;
@@ -172,7 +213,7 @@ body{
 
 .parteZoneScorrere section {
   min-height: 50vh;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .parteZonaMappa {
@@ -185,6 +226,7 @@ body{
 .mappa {
   position: relative;
   max-width: 450px;
+  margin-left: auto;
 }
 .fotoMappa {
   width: 100%;
@@ -198,12 +240,24 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
+  filter: drop-shadow(0 0 6px #ffd36b) drop-shadow(0 0 16px #ffd36b);
 }
 .zona {
-  fill: black;
+  fill: transparent;
+  stroke: #ffd36b;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.6s;
+  pointer-events: all; 
 }
+
+.zona.attiva, 
+.zona:hover {
+  opacity: 1;
+}
+
 
 .rigaStorica {
   display: flex;
@@ -221,21 +275,49 @@ body{
   }
 }
 
-.StemmaFriuli {
+.testoStoria{
+  p{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
+
+.stemma {
   height: 70px;  
   width: auto;
   display: block;
 }
 
-
-
-
-
 .comuni {
-  font-size: 0.95rem;
-  margin: 15px 0 25px;
-  color: #555;
+  margin: 15px 0 20px;
 }
+
+.comuni strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.comuni ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px; 
+}
+
+.comuni ul li a {
+  font-family: "Cinzel Decorative", serif !important;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.comuni ul li a:hover {
+  color: #ac1c34;
+}
+.paginaBianchi .comuni ul li a:hover {
+  color: #f3e58a;
+}
+
 
 .viniTipici h3 {
   font-family: "Cinzel Decorative", serif;
@@ -261,15 +343,145 @@ body{
   }
 }
 
-.info-vino h4 {
-  margin: 0 0 4px 0;
-  font-size: 1rem;
-  color: #2c2a29;
+.rettangoloMiniVini {
+  h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #2c2a29;
+  }
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+  }
 }
 
-.info-vino p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #444;
+/*CSS VINI ROSSI E BIANCHI*/
+
+.corpoSottoTitolo h2 {
+  font-size: 2rem;
+  margin-top: 70px;
+  margin-bottom: 25px;
+}
+.paginaBianchi .corpoSottoTitolo h2 {
+  border-bottom: 3px solid #bda832;
+}
+
+.blocco-vino {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.blocco-vino.invertito {
+  flex-direction: row-reverse;
+}
+
+.dettaglio-testo-vino {
+  flex: 1;
+}
+
+.dettaglio-foto-vino {
+  flex: 0 0 280px;
+}
+
+.dettaglio-foto-vino img {
+  width: 200px;
+  height: auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.voce-vino {
+  margin: 18px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #281e20;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.paginaBianchi .voce-vino {
+  border-bottom: 2px solid #bda832;
+}
+
+.dettaglio-testo-vino p {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+  color: #eee;
+}
+
+/*per schermi diversi*/
+
+/*finestra stretta */
+@media (max-width: 900px) {
+  .parteCentraleZoneMappa {
+    flex-direction: column;
+  }
+  .parteZoneScorrere,
+  .parteZonaMappa {
+    width: 100%;
+    padding-right: 0;
+  }
+  .parteZonaMappa {
+    position: static;
+  }
+  .mappa {
+    margin: 0 auto;
+  }
+
+  .territorioScritta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tipologie {
+    flex-direction: column;
+    margin: 40px 10px 30px;
+  }
+  
+  .blocco-vino,
+  .blocco-vino.invertito {
+    flex-direction: column;
+  }
+  .dettaglio-foto-vino {
+    flex: none; 
+  }
+}
+
+/*cellulare */
+@media (max-width: 600px) {
+  .titoloVigne h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+  }
+  .titoloVigne h2 {
+    font-size: 1.3rem;
+  }
+
+  .tipologie {
+    flex-direction: column;
+    margin: 40px 10px 30px;
+  }
+  .tipologie a img {
+    height: 100px;
+    margin-top: 0;
+  }
+  .tipologie a span {
+    font-size: 1.6rem;
+  }
+
+  .rigaStorica {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .corpoSottoTitolo {
+    margin: 10px;
+  }
 }

@@ -1,19 +1,20 @@
-const sezioni = document.querySelectorAll(".parteZoneScorrere section");
+const bottoni = document.querySelectorAll("a.zone");
+let timer;
 
 function illumina(id) {
-  document.querySelectorAll(".zona").forEach(z => {
-    z.style.opacity = (z.id === id) ? 0 : 0.55;
-  });
+  const zona = document.getElementById(id);
+  document.querySelectorAll(".zona").forEach(z => z.classList.remove("attiva"));
+  zona.classList.add("attiva");
+
+  clearTimeout(timer);
+  timer = setTimeout(function () {
+    zona.classList.remove("attiva");
+  }, 1000);
 }
 
-const osservatore = new IntersectionObserver(function (voci) {
-  voci.forEach(voce => {
-    if (voce.isIntersecting) {
-      illumina("zona-" + voce.target.id);
-    }
+bottoni.forEach(function (b) {
+  b.addEventListener("click", function () {
+    const id = "zona-" + b.getAttribute("href").slice(1);
+    setTimeout(function () { illumina(id); }, 500); 
   });
-}, { rootMargin: "-40% 0px -40% 0px" });
-
-sezioni.forEach(s => osservatore.observe(s));
-
-console.log("Lo script funziona!");
+});
